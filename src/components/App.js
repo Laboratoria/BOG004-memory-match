@@ -1,26 +1,57 @@
-//
-// Para incluir los diferentes sets de cartas podemos _importar_ el archivo
-// JavasSript que contenga el `export` correspondiente...
-//
-// import pokemon from '../data/pokemon/pokemon.js';
-// console.log(pokemon);
-//
-// O alternativamente podríamos cargar el JSON de forma asíncrona usando
-// `fetch` en el momento que consideremos necesario.
-//
-// fetch('./data/pokemon/pokemon.json')
-//   .then(resp => resp.json())
-//   .then(console.log)
-//   .catch(console.error);
-//
+import pokemon from '../data/pokemon/pokemon.js'
 
-const App = () => {
-  const el = document.createElement('div');
+// Cambio de pantalla
+/*const boton= document.getElementById('play')
+document.getElementById("indexPage").style.display= 'block'
+//document.querySelector("section").style.display= 'none'
+boton.addEventListener('click', () => {
+     
+    console.log("hiciste click")
+} )
 
-  el.className = 'App';
-  el.textContent = 'Hola mundo!';
+ // document.querySelector('section').style.display=block*/
+const play= document.getElementById('play');
+const indexPage= document.getElementById('indexPage').style.display= 'block';
+const section= document.getElementById('root').style.display= 'none';
+  play.addEventListener('click', ()=>{
+     indexPage= document.getElementById('indexPage').style.display= 'none';
+     section= document.getElementById('root').style.display= 'block';
+    
 
-  return el;
-};
+  } )
 
-export default App;
+var data = pokemon
+
+//Modulo 1 generar tablero
+const generarTablero = () =>{
+  const elementos = document.createElement('section');
+  elementos.contains =[]
+  let tarjetas = []
+      for(let j = 0; j<2; j++){
+          for(let i = 0; i < 9; i++){
+              tarjetas.push(`
+              <div class="area-tarjeta"(${i})">
+                  <div class="tarjeta" id="tarjeta${i}">
+                      <div class="cara trasera" id="trasera${i}">
+                      <img src="${data.items[i].image}" alt="">
+                      </div>
+                  </div>
+                  <div class="cara superior">
+                          <i class="far fa-question-circle"></i>
+                      </div>
+                  </div>
+              </div>     
+          `) 
+          console.log(data.items[i].image)
+          }
+          data.items.sort(()=>Math.random()-0.5)
+          elementos.innerHTML = tarjetas.join("") 
+      }                
+      
+      return elementos
+
+}
+generarTablero()
+export {generarTablero}
+
+
