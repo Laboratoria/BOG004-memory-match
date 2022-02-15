@@ -1,0 +1,51 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-image: url(image.jpg);
+    height: 500px;
+    background-size: cover;
+}
+
+.principal{
+    width: 400px;
+    background: #dac152;
+    padding: 30px;
+    margin: auto;
+    margin-top: 100px;
+    border-radius: 4px;
+    font-family: 'Audiowide';
+    color: #062EFC;
+    box-shadow: 7px 13px 37px #000;
+}
+
+.principal h1 {
+    font-size: 30px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.principal h3 {
+    font-size: 25px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.principal h4 {
+    font-size: 20px;
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.principal .botons {
+    width: 100%;
+    background: #3a3a3a;
+    border-radius: 4px;
+    padding: 12px;
+    color: #FAB505;
+    margin: 16px 0;
+    font-size: 16px;
+}
