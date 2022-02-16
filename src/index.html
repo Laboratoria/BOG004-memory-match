@@ -1,20 +1,38 @@
 <!DOCTYPE html>
-<html>
+<!-- <div id="root"></div> -->
+<html> 
   <head>
     <meta charset="utf-8">
     <title>Memory Match</title>
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <!-- <div id="root"></div> -->
-    <section class="principal">
-      <h1>Pokemon Memory</h1>
-      <h3>Instrucciones</h3>
-      <h4>1. Haz clic en una carta y encuentra su pareja. <br>
-        2. Gana 5 puntos por pareja encontrada. <br>
-        3. Pierde 4 puntos por intento fallido.</h4>
-      <input class="botons" type="button" name="JUGAR" id="play" value="JUGAR">
-    </section>
+  
+    <div class="principal" id="pag1">
+      <h1 class="principal__titulo">POKÉMON MEMORY</h1>
+      <h3 class="principal__instucciones">INSTRUCCIONES</h3>
+      <ol class="lista__instrucciones">
+        <li>Selecciona una carta.</li>
+        <li>
+          Selecciona nuevamente otra carta para determinar si la imagen
+          coincide.
+        </li>
+        <li>
+          Si las cartas son iguales, quedarán visibles hasta finalizar el juego,
+          si no, regresarán a su estado inicial.
+        </li>
+        <li>
+          Puntuación: Por cada pareja ganarás 5 puntos, de lo contrario perderás
+          4 puntos.
+        </li>
+      </ol>
+      <button class="botones" name="JUGAR" id="jugar" onclick="mostrar()">JUGAR</button>
+     <!-- <div id="root"></div> -->
+    </div>
+
+    <div id="pag2">
+      <h1>"Este sitio esta en construcción"</h1>
+    </div>
     <script src="main.js" type="module"></script>
   </body>
 </html>

@@ -1,51 +1,90 @@
 * {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
-}
+    }
 
-body {
-    background-image: url(image.jpg);
-    height: 500px;
-    background-size: cover;
-}
+    body {
+        box-sizing: border-box;
+        background-image: url(./images/image.jpg);
+        height: 500px;
+        background-size: cover;
+        background-repeat: no-repeat;
 
-.principal{
-    width: 400px;
-    background: #dac152;
-    padding: 30px;
-    margin: auto;
-    margin-top: 100px;
-    border-radius: 4px;
-    font-family: 'Audiowide';
-    color: #062EFC;
-    box-shadow: 7px 13px 37px #000;
-}
-
-.principal h1 {
-    font-size: 30px;
-    margin-bottom: 20px;
+    }
+.principal__titulo{
+    position: absolute;
+    width: 646px;
+    height: 64px;
+    left: 194px;
+    top: 56px;
+    font-family: Audiowide;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 64px;
+    line-height: 45px;
     text-align: center;
+    color: #FAE105;
+    -webkit-text-stroke: 1px #044AFF;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    line-height: 60px;
 }
 
-.principal h3 {
-    font-size: 25px;
-    margin-bottom: 20px;
+.principal__instucciones{
+    position: absolute;
+    width: 340px;
+    height: 56px;
+    left: 207px;
+    top: 147px;
+    font-family: Audiowide;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 24px;
+    line-height: 187%;
+    /* or 187% */
+    display: flex;
+    align-items: center;
     text-align: center;
+    color: #FFE600;
+    -webkit-text-stroke: 1px #0a0a0a;
+    
 }
 
-.principal h4 {
-    font-size: 20px;
-    margin-bottom: 20px;
-    text-align: left;
+.lista__instrucciones{
+    position: absolute;
+    width: 340px;
+    height: 250px;
+    left: 230px;
+    top: 206px;
+    font-family: Average Sans;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 45px;
+    /* or 321% */
+    align-items: center;
+    color: #070707;
+    border: 0.5px solid rgba(0, 0, 0, 0.8);
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border: 1px solid #000000;
+    line-height: 30px;
 }
 
-.principal .botons {
-    width: 100%;
-    background: #3a3a3a;
-    border-radius: 4px;
-    padding: 12px;
-    color: #FAB505;
-    margin: 16px 0;
-    font-size: 16px;
+.botones{
+    position: absolute;
+    width: 191px;
+    height: 47px;
+    left: 282px;
+    top: 492px;
+    font-family: Audiowide;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 24px;
+    line-height: 45px;
+/* or 187% */
+    text-align: center;
+    color: #FFE600;
+    background: rgba(0, 0, 0, 0)
+}
+#pag2{
+    display: none;
 }
