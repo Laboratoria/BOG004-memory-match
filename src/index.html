@@ -1,12 +1,52 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <meta charset="utf-8">
-    <title>Memory Match</title>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Memory Match - Game</title>
     <link rel="stylesheet" href="style.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet">
   </head>
-  <body>
-    <div id="root"></div>
+  <body> 
+    
+    <main class="main-container">
+
+      <header>
+        <h1>MEMORY MATCH</h1>
+        <h2>POKEMON</h2>
+      </header> 
+      
+       <section  class="container-button">
+            
+          <img class= "container-image" src="./images/picachu_principal.png" alt="imagen-picachu">
+          <button type="button"  class="play" id="play"> Play </button>    
+          </section>
+      
+
+      <section id="screen-two" class="screen-two" style="display: none" >  
+        <section class="cards">
+          <main class="board" id="board">
+           <div class="container-card">
+            <div class="back">
+             </div>
+      </div> 
+    </section> 
+    
+  </section>
+    
+  <section id="screen-three" class="screen-three" style="display: none" >  
+    <div id="end-container">
+      <p id="won-lost"></p>
+    </div>
+    <button type="submit" class="play-again" id="play-button"> VOLVER A JUGAR </button>
+  </section> 
+  
+    </main>
+
+    <footer>
+      <p>Made by Roxy Solano and Paula Quintero </p>
+    </footer>
     <script src="main.js" type="module"></script>
   </body>
 </html>
