@@ -1,8 +1,7 @@
 <!DOCTYPE html>
-<!-- <div id="root"></div> -->
 <html> 
   <head>
-    <meta charset="utf-8">
+    <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Memory Match</title>
     <link rel="stylesheet" href="style.css" />
   </head>
@@ -11,23 +10,25 @@
     <div class="principal" id="pag1">
       <h1 class="principal__titulo">POKÉMON MEMORY</h1>
       <h3 class="principal__instucciones">INSTRUCCIONES</h3>
-      <ol class="lista__instrucciones">
-        <li>Selecciona una carta.</li>
-        <li>
-          Selecciona nuevamente otra carta para determinar si la imagen
-          coincide.
-        </li>
-        <li>
-          Si las cartas son iguales, quedarán visibles hasta finalizar el juego,
-          si no, regresarán a su estado inicial.
-        </li>
-        <li>
-          Puntuación: Por cada pareja ganarás 5 puntos, de lo contrario perderás
-          4 puntos.
-        </li>
-      </ol>
-      <button class="botones" name="JUGAR" id="jugar" onclick="mostrar()">JUGAR</button>
-     <!-- <div id="root"></div> -->
+      <div class="lista__instrucciones">
+        <ol>
+          <li>Selecciona una carta.</li>
+          <li>
+            Selecciona nuevamente otra carta para determinar si la imagen
+            coincide.
+          </li>
+          <li>
+            Si las cartas son iguales, quedarán visibles hasta finalizar el juego,
+            si no, regresarán a su estado inicial.
+          </li>
+          <li>
+            Puntuación: Por cada pareja ganarás 5 puntos, de lo contrario perderás
+            4 puntos.
+          </li>
+        </ol>
+      </div>
+      <button class="botones" id="botonInicial" type="button">JUGAR</button>
+     <div id="root"></div>
     </div>
 
     <div id="pag2">
