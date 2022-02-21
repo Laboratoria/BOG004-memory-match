@@ -1,3 +1,37 @@
+export const App = (dataPokemon) => {
+  
+//console.log("Nice job") 
+
+const traerCartasTodas = (itemCartas) =>{ 
+  const traerData = document.createElement('div');
+  traerData.className = 'TableroApp';
+ const contenido =  `<img scr="${itemCartas.image[i]}">`
+  //const contenido = `<p>${itemCartas.id [i]}</p>`
+  console.log(contenido)
+  traerData.innerHTML = contenido
+  //traerData.textContent = 'Hola mundo!';
+  const contenedor = document.getElementById ("contenedorCartas") .appendChild(traerCartasTodas);
+  console.log('ver la data del argumento que llega al parametro: ',dataPokemon);
+  return traerData;
+}
+// export{App};
+console.log("Nice job") 
+
+const App = () => {
+dataPokemon.items.forEach((itemCartas) => {
+traerCartasTodas(itemCartas);
+console.log("dataPokemon.items")
+
+})
+}
+}
+
+/*function visualizarCartas() {
+var conseguirCartas = document.getElementById ("contenedorCartas").innerHTML;
+document.getElementById ("cartasEnPantalla").innerHTML = "Aquí estan las cartas" + conseguirCartas
+return visualizarCartas; */
+
+
 //
 // Para incluir los diferentes sets de cartas podemos _importar_ el archivo
 // JavasSript que contenga el `export` correspondiente...
@@ -24,3 +58,4 @@
 }; */
 
 /* export default App; */
+
