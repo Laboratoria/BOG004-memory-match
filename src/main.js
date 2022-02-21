@@ -1,8 +1,12 @@
- import App from '../scr/components/App.js';
+ import {App} from './components/App.js'
+ import pokemon from '../data/pokemon/pokemon.js';
+console.log(pokemon);
 
-App();
 
- /*import App from './src\components\App.js'; */
+const dataPokemon = pokemon.items
+App(dataPokemon);
+//console.log('ver app ', App(dataPokemon));
+
 
 document.getElementById('pag2').style.display = 'none';
 const botonJugar = document.getElementById('botonInicial')
@@ -12,3 +16,4 @@ botonJugar.addEventListener('click', () => {
     document.getElementById('pag2').style.display = 'block';
 })
 
+App()

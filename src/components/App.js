@@ -1,20 +1,35 @@
-import pokemon from '../data/pokemon/pokemon.js';
-console.log(pokemon);
+export const App = (dataPokemon) => {
+  
+//console.log("Nice job") 
 
+const traerCartasTodas = (itemCartas) =>{ 
+  const traerData = document.createElement('div');
+  traerData.className = 'TableroApp';
+ const contenido =  `<img scr="${itemCartas.image[i]}">`
+  //const contenido = `<p>${itemCartas.id [i]}</p>`
+  console.log(contenido)
+  traerData.innerHTML = contenido
+  //traerData.textContent = 'Hola mundo!';
+  const contenedor = document.getElementById ("contenedorCartas") .appendChild(traerCartasTodas);
+  console.log('ver la data del argumento que llega al parametro: ',dataPokemon);
+  return traerData;
+}
+// export{App};
+console.log("Nice job") 
 
 const App = () => {
-  const traerData = document.createElement('div');
+dataPokemon.items.forEach((itemCartas) => {
+traerCartasTodas(itemCartas);
+console.log("dataPokemon.items")
 
-  traerData.className = 'App';
-  traerData.textContent = 'Hola mundo!';
+})
+}
+}
 
-  return traerData;
-}; 
-
-
-export{App};
-
-console.log("Nice job") 
+/*function visualizarCartas() {
+var conseguirCartas = document.getElementById ("contenedorCartas").innerHTML;
+document.getElementById ("cartasEnPantalla").innerHTML = "Aquí estan las cartas" + conseguirCartas
+return visualizarCartas; */
 
 
 //
@@ -43,3 +58,4 @@ console.log("Nice job")
 }; */
 
 /* export default App; */
+
