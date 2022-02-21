@@ -2,8 +2,8 @@ import App from './App';
 
 describe('App', () => {
   it('should render without crashing', () => {
-    const el = App();
-    expect(el instanceof HTMLElement).toBe(true);
+    const traerData = App();
+    expect(traerData instanceof HTMLElement).toBe(true);
   });
 }); 
 

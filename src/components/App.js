@@ -1,3 +1,22 @@
+import pokemon from '../data/pokemon/pokemon.js';
+console.log(pokemon);
+
+
+const App = () => {
+  const traerData = document.createElement('div');
+
+  traerData.className = 'App';
+  traerData.textContent = 'Hola mundo!';
+
+  return traerData;
+}; 
+
+
+export{App};
+
+console.log("Nice job") 
+
+
 //
 // Para incluir los diferentes sets de cartas podemos _importar_ el archivo
 // JavasSript que contenga el `export` correspondiente...

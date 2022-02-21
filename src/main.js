@@ -1,4 +1,9 @@
-/* import App from './components/App.js';  */
+ import App from '../scr/components/App.js';
+
+App();
+
+ /*import App from './src\components\App.js'; */
+
 document.getElementById('pag2').style.display = 'none';
 const botonJugar = document.getElementById('botonInicial')
 botonJugar.addEventListener('click', () => {
