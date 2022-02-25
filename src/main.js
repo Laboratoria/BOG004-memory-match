@@ -3,8 +3,8 @@
 console.log(pokemon);
 
 /* Este es el proceso donde la data se relaciona */
-const dataPokemon = pokemon.items
-
+let dataPokemon = pokemon.items
+dataPokemon = dataPokemon.concat(dataPokemon)
 document.getElementById('pag2').style.display = 'none';
 const botonJugar = document.getElementById('botonInicial')
 botonJugar.addEventListener('click', () => {
@@ -19,3 +19,20 @@ botonJugar.addEventListener('click', () => {
     document.getElementById('pag2').style.display = 'block';
 })
 
+function createCards(){
+    const cardsContainerElement = document.getElementById("contenedorTodas");
+    const cardBaseContainerHTML = '<div class="column card-container"><img class="card" data-pokemon-name"" src="https://cdn.pixabay.com/photo/2016/07/23/13/18/pokemon-1536849__480.png"></div>';
+    const pokemonsLength = dataPokemon.length;
+  
+    for (let index = 0; index < pokemonsLength; index++){
+      cardsContainerElement.innerHTML += cardBaseContainerHTML 
+    }
+}
+
+
+
+function main() {
+  createCards()
+}
+
+main()

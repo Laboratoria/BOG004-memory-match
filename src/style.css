@@ -90,7 +90,15 @@
     margin-right: 15%; */
   }
 }
-/* img{
-  width: 200px;
-  height: 200px;
-} */
+.contenedorCartas{
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+} 
+.card{
+  width: 100px;
+  height: 100px;
+}
+.tableroApp{
+  width: 100px;
+  height: 100px;
+}
