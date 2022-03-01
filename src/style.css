@@ -90,15 +90,50 @@
     margin-right: 15%; */
   }
 }
-.contenedorCartas{
+
+.contenedorCartas_traseras{ /*Es la cara que se ve */
   display: grid;
   grid-template-columns: repeat(6, 1fr);
-} 
-.card{
-  width: 100px;
-  height: 100px;
+  --w: calc(70vw/6);
+  --h: calc(70vw/3);
+  width: var(--w);
+  height: var(--h);
+  min-width: 20px;
+  max-width: 80px;
+  transition: all 0.5s;
+  position: relative;
+
 }
-.tableroApp{
-  width: 100px;
-  height: 100px;
+
+.frontales{ /*Es el pokemon */
+  display: grid;
+  border: #ffd700;
+  grid-template-columns: repeat(6, 1fr);
+  /*border-style:solid;
+	border-radius:4px;
+  border-color: blue;*/
+  --w: calc(70vw/6);
+  --h: calc(70vw/3);
+  width: var(--w);
+  height: var(--h);
+  min-width: 100px;
+  transition: all 0.5s;
+  position: absolute;
+
 }
+
+#bulbasaur #ivysaur #venusaur
+#charmander #charmeleon #charizard #squirtle
+#wartortle #blastoise {
+  border-style:solid;
+	border-radius:4px;
+  border-color: blue;
+
+
+}
+
+ 
+
+
+
+
