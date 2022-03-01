@@ -32,12 +32,13 @@ function createCards(){
       cardsContainerElement.innerHTML += cardBaseContainerHTML 
     }
 }
+
+
 function main() {
   createCards()
 }
 
 main()
-
 //Proceso de ver las cartas aleatoriamente
 const mezclar = () => { 
   const tarjetas = dataPokemon;
@@ -46,6 +47,7 @@ const mezclar = () => {
 mezclar();
 
 // 
+
 
 
  

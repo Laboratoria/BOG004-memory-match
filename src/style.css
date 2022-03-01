@@ -91,48 +91,56 @@
   }
 }
 
-.contenedorCartas_traseras{ /*Es la cara que se ve */
+.contenedorCartas_traseras{ /*Es la cara que se ve*/
   display: grid;
   grid-template-columns: repeat(6, 1fr);
-  --w: calc(70vw/6);
-  --h: calc(70vw/3);
-  width: var(--w);
-  height: var(--h);
-  min-width: 20px;
-  max-width: 80px;
-  transition: all 0.5s;
-  position: relative;
+  height: 130px;
+  width: 130px; 
+  text-align: center;
 
 }
-
-.frontales{ /*Es el pokemon */
-  display: grid;
-  border: #ffd700;
-  grid-template-columns: repeat(6, 1fr);
-  /*border-style:solid;
-	border-radius:4px;
-  border-color: blue;*/
-  --w: calc(70vw/6);
-  --h: calc(70vw/3);
-  width: var(--w);
-  height: var(--h);
-  min-width: 100px;
-  transition: all 0.5s;
-  position: absolute;
-
-}
-
-#bulbasaur #ivysaur #venusaur
-#charmander #charmeleon #charizard #squirtle
-#wartortle #blastoise {
+.card {  /*Pokebolas*/
   border-style:solid;
-	border-radius:4px;
-  border-color: blue;
-
+	border-radius:8px;
+  border-color: rgb(94, 8, 233);
+  height: 127px;
+  width: 130px;
+  position: relative; 
+  /*transition: transform 0.2s ease-out; */
+  transform-style: preserve-3d;
+  /*transform: perspective(600px) rotateY(56deg);*/
+  text-align: center;
 
 }
 
- 
+.frontales{ /*Es el pokemon*/ 
+  text-align: center;
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  height: 200px;
+  width: 200px;
+  position: absolute; 
+  transform-style: preserve-3d;
+/*transform: perspective(600px) rotateY(180deg); */
+
+}
+
+div.TableroApp{
+  text-align: center;
+  border-style:solid;
+	border-radius:8px;
+  border-color: rgb(170, 11, 11);
+  /*transform: rotateY(180deg);*/
+  height: 130x;
+  width: 130px;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+}
+
+ .div.TableroApp:hover  .card {
+  transform: rotateY(180deg);
+}
 
 
 
