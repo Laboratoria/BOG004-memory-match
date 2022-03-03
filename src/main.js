@@ -29,30 +29,26 @@ function createCards(){
     for (let i = 0; i < dataPokemon.length; i++) {
       const cardBaseContainerHTML = document.createElement("div")
       cardBaseContainerHTML.setAttribute("class", "column card-container");
-      const imagePokemon = `<img class="card" data-pokemon-name"" src="https://cdn.pixabay.com/photo/2016/07/23/13/18/pokemon-1536849__480.png" id="pokebolas"><img src="${dataPokemon[i].image}" id="data">`
+      const imagePokemon = `<img class="card" data-pokemon-name"" src="https://cdn.pixabay.com/photo/2016/07/23/13/18/pokemon-1536849__480.png" id="${i}"><img src="${dataPokemon[i].image}" id="${i}" class="pokemon oculto">`
       cardBaseContainerHTML.innerHTML= imagePokemon;
-      cardBaseContainerHTML.addEventListener("click", () =>{
-        console.log("Hola")
-        document.getElementById('pokebolas').style.display = 'none';
-        document.getElementById('data').style.display = 'block';
+      cardBaseContainerHTML.addEventListener("click", (e) =>{
+        const idPokemonSeleccionado = parseInt(e.target.id);
+        const imagenesPokebolas = document.getElementsByClassName('card');
+        const imagenesData = document.getElementsByClassName('pokemon');
+        console.log(idPokemonSeleccionado)
+      imagenesPokebolas[idPokemonSeleccionado].classList.toggle("oculto")  
+      imagenesData[idPokemonSeleccionado].classList.toggle("oculto")
       })
       cardsContainerElement.appendChild(cardBaseContainerHTML)  
     }
-    
-    /* const pokemonsLength = dataPokemon.length; */
-    
-  
-    /* for (let index = 0; index < pokemonsLength; index++){
-      cardsContainerElement.innerHTML += cardBaseContainerHTML 
-    } */
 }
 
 
 function main() {
   createCards()
 }
-
 main()
+
 //Proceso de ver las cartas aleatoriamente
 const mezclar = () => { 
   const tarjetas = dataPokemon;

@@ -100,7 +100,6 @@
 
 }
 .card {  /*Pokebolas*/
-  border-style:solid;
 	border-radius:8px;
   border-color: rgb(94, 8, 233);
   height: 127px;
@@ -110,25 +109,21 @@
   transform-style: preserve-3d;
   /*transform: perspective(600px) rotateY(56deg);*/
   text-align: center;
-  
 
 }
 
 .frontales{ /*Es el pokemon*/ 
-  text-align: center;
   display: grid;
   grid-template-columns: repeat(6, 1fr);
   height: 200px;
   width: 200px;
   position: absolute; 
   transform-style: preserve-3d;
-  
-  /* transform: perspective(600px) rotateY(180deg);  */
+/*transform: perspective(600px) rotateY(180deg); */
 
 }
 
 div.TableroApp{
-  text-align: center;
   border-style:solid;
 	border-radius:8px;
   border-color: rgb(170, 11, 11);
@@ -142,6 +137,10 @@ div.TableroApp{
 
  .div.TableroApp:hover  .card {
   transform: rotateY(180deg);
+}
+
+.oculto {
+  display: none; 
 }
 
 
