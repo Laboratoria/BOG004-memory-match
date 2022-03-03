@@ -110,6 +110,7 @@
   transform-style: preserve-3d;
   /*transform: perspective(600px) rotateY(56deg);*/
   text-align: center;
+  
 
 }
 
@@ -121,7 +122,8 @@
   width: 200px;
   position: absolute; 
   transform-style: preserve-3d;
-/*transform: perspective(600px) rotateY(180deg); */
+  
+  /* transform: perspective(600px) rotateY(180deg);  */
 
 }
 
