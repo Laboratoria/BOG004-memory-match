@@ -115,8 +115,8 @@
 .frontales{ /*Es el pokemon*/ 
   display: grid;
   grid-template-columns: repeat(6, 1fr);
-  /*height: 200px;
-  width: 200px;*/
+  /* height: 200px;
+  width: 200px; */
   position: absolute; 
   transform-style: preserve-3d;
 /*transform: perspective(600px) rotateY(180deg); */
