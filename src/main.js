@@ -31,41 +31,49 @@ botonJugar.addEventListener("click", () => {
 });
 
 let arrayParaCompararId = new Array();
+function retrocederLasCartas(){
+  
+  const pokemonesVisibles = document.getElementsByClassName("card");
+  for (let i = 0; i < pokemonesVisibles.length; i++) {
+    //console.log(pokemonesVisibles[i].dataset.name)
+   if (arrayParaCompararId.includes(pokemonesVisibles[i].dataset.name)){
+    pokemonesVisibles[i].classList.toggle("visible");
+    }
+    
+  } 
+  const pokemonesOcultos = document.getElementsByClassName("pokemon");
+  for (let i = 0; i < pokemonesOcultos.length; i++) {
+    //console.log(pokemonesOcultos[i].dataset.name)
+   if (arrayParaCompararId.includes(pokemonesOcultos[i].dataset.name)){
+    pokemonesOcultos[i].classList.toggle("visible");
+    
+   }
+    
+  }  
+} 
 function compararId(idDeComparar) {
+  console.log(idDeComparar)
   if (arrayParaCompararId.length < 2) {
     arrayParaCompararId.push(idDeComparar);
     if (arrayParaCompararId[0] && arrayParaCompararId[1]) {
-      if (arrayParaCompararId[0] === arrayParaCompararId[1]) {     
+      if (arrayParaCompararId[0] === arrayParaCompararId[1]){     
         return console.log(true);
       } else {
-        //arrayParaCompararId[0].classList.toggle("backhidden")
-        //arrayParaCompararId[1].classList.toggle("backhidden")
-
-       //setTimeout(function(){
-          //arrayParaCompararId.classList.toggle("oculto");
-          //arrayParaCompararId.classList.toggle("oculto");
-          //console.log("ESTE ES TIEMPO");
-      //}, 1000);
-
-      //function retrocederLasCartas (){
-        //arrayParaCompararId.classList.toggle("oculto");
-        //console.log("hola");
-      //}
-      //setTimeout(retrocederLasCartas, 500);
-
-        //const prueba = document.querySelectorAll('[data-name="'+arrayParaCompararId[0]+'"]');
-        //prueba.classList.toggle("oculto", arrayParaCompararId.length == 2 )
-        //console.log(prueba);
-        //arrayParaCompararId.classList.toggle("visible", arrayParaCompararId.length == 2 )
+        retrocederLasCartas()
+        removerUltimoElemento
         return console.log(false);
-      }
+      } 
     }
   }
-  else if ( arrayParaCompararId.length === 2){
+   
+  else if(arrayParaCompararId.length === 2){
     arrayParaCompararId = [];
-    arrayParaCompararId.push(idDeComparar);
-  }
-}
+    arrayParaCompararId.push(idDeComparar); 
+  } 
+}    
+let removerUltimoElemento = arrayParaCompararId.pop();
+console.log(removerUltimoElemento);  
+
 /*Se crean las imagenes de la cara posterior y se multiplican*/
 function createCards() {
   const cardsContainerElement = document.getElementById("contenedorTodas");
@@ -74,7 +82,7 @@ function createCards() {
     const cardBaseContainerHTML = document.createElement("div");
     cardBaseContainerHTML.setAttribute("class", "column card-container");
     const imagePokemon = `<img class="card" data-name="${dataPokemon[i].id}" src="https://cdn.pixabay.com/photo/2016/07/23/13/18/pokemon-1536849__480.png" id="${i}">
-                          <img src="${dataPokemon[i].image}" id="${i}" class="pokemon oculto">`;
+                          <img src="${dataPokemon[i].image}" id="${i}" class="pokemon oculto" data-name="${dataPokemon[i].id}">`;
 
     cardBaseContainerHTML.innerHTML = imagePokemon;
     cardBaseContainerHTML.addEventListener("click", (e) => {
@@ -92,4 +100,3 @@ function createCards() {
 }
 
 createCards();
-
