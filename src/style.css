@@ -1,0 +1,313 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html{
+  box-sizing: border-box; /*Cuando agregemos un width a un elemento y luego se añada un padding, no modifique el tamaño del elemento */
+  font-size: 62.5%; /*corresponde a 10px el elemento raiz*/
+}
+
+body {
+  background-color: #143a3f;
+  text-align: center;
+  justify-content: center;
+  font-family: "Raleway", sans-serif;
+  color: white;
+  height: 100vh;
+}
+
+.main-container {
+  background-color: #80547B;
+  width: 80%;
+  height: 90vh;
+  margin: 15px auto 30px auto;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+h1,
+h2 {
+  padding: 30px;
+  margin: 0%;
+  letter-spacing: 15px;
+  line-height: 30px;
+  font-size: 30px;
+}
+
+header h1 {
+  margin-top: 5px;
+}
+
+.container-button {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  margin-top: 40px;
+  margin-bottom: auto;
+}
+
+.container-image {
+  width: 300px;
+}
+
+.playButton{
+  height: 60px;
+  width: 250px;
+  margin: 10px auto;
+  margin: auto 0;
+  border-radius: 20px;
+  font-size: 15pt;
+  font-weight: 800;
+  letter-spacing: 0.3cm;
+  color: #ffffff;
+  background-color: rgb(44, 65, 83);
+  border-style: none;
+  cursor: pointer;
+}
+
+button:hover{
+  background-color: #143a3f ;
+}
+
+button:active{
+  background-color: #1691a1;
+}
+
+.screen-two section {
+  cursor: pointer;
+  perspective: 800px; 
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-gap: 2.5rem;
+  margin-bottom: 20px;
+}
+
+.container-card {
+  
+  position: relative;
+  cursor: pointer; 
+  width: 10rem;
+  height: 12rem;
+  border-radius: 15px;
+  transform-style: preserve-3d;
+  transition: all 1.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.container-card img {
+  width: 100px;
+  height: 100px;
+}
+
+.front,
+.back {
+  position: absolute;
+  cursor: pointer;
+}
+
+
+.front {
+  
+  pointer-events: none;
+  background-color: #143a3f;
+  border-radius: 20px;
+  align-content: center;
+  backface-visibility: hidden;
+}
+
+.back {
+  pointer-events: none;
+  width: 100px;
+  height: 120px;
+  background-color: aliceblue;
+  border-radius: 20px;
+  align-content: center;
+}
+
+.back img{
+  width: 80px;
+}
+
+.toggleCard {
+  transform: rotateY(180deg);
+}
+
+.screen-three{
+  width: 100%;
+}
+
+.screen-three h2 {
+  padding: 30px;
+  margin: 0%;
+  letter-spacing: 15px;
+  line-height: 30px;
+  font-size: 30px;
+}
+
+.playButton2{
+  align-items:center;
+  margin: 10px;
+  height: 60px;
+  padding: 5px ;
+  border-radius: 20px;
+  font-size: 15pt;
+  font-weight: 800;
+  letter-spacing: 0.3cm;
+  color: #ffffff;
+  background-color: rgb(44, 65, 83);
+  border-style: none;
+  cursor: pointer;
+}
+
+.screen-three img{
+  width: 200px;
+}
+
+footer img{
+  
+   width: 200px;
+}
+
+
+
+
+@media screen and (max-width: 1024px) {
+}
+
+@media screen and (max-width: 768px) {
+
+  .main-container {
+    width: 95%;
+    height: 100vh;
+  }
+
+  .container-card {
+    width: 12rem;
+    height: 11rem;
+    
+  }
+  
+
+  .container-image {
+    width: 200px;
+  }
+
+  .play-button {
+    width: 150px;
+    letter-spacing: 8px;
+  }
+
+  header h1,
+  h2 {
+    font-size: 25px;
+  }
+
+  .screen-two section {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 2.5rem;
+    margin-bottom: 20px;
+  }
+
+  .container-card:nth-child(17){
+    grid-column: 2 / 3;
+
+  }
+  .container-card:nth-child(18){
+    grid-column: 3 / 5;
+   
+  }
+
+}
+
+@media screen and (max-width: 576px) {
+  .main-container {
+    width: 90%;
+    height: 100vh;
+    
+  }
+
+  .back {
+    width: 70px;
+    height: 80px;
+  }
+  
+  .back img{
+    width: 30px;
+    height: 10px;
+  }
+
+  .front svg{
+    width: 70px;
+    height: 80px;
+  }
+
+  .container-card {
+    width: 7rem;
+    height: 9rem;
+    
+  }
+  
+  .container-card img {
+    width: 55px;
+    height: 80px;
+  }
+  
+  
+  .screen-two section {
+    grid-gap: 2rem;
+  }
+
+
+}
+
+@media screen and (max-width: 320px) {
+  .main-container {
+    width: 95%;
+    height: 100vh;
+  }
+
+  .back {
+    width: 60px;
+    height: 70px;
+  }
+  
+  .back img{
+    width: 20px;
+    height: 10px;
+  }
+
+  .front svg{
+    width: 60px;
+    height: 70px;
+  }
+
+  .container-card {
+    width: 6rem;
+    height: 8rem;
+    
+  }
+  
+  .container-card img {
+    width: 40px;
+    height: 70px;
+  }
+  
+  
+  .screen-two section {
+    grid-gap: 2rem;
+  }
+
+  .screen-two section {
+    grid-gap: 1rem;
+    margin-bottom: 20px;
+  }
+
+}
+
+
+
+
