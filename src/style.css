@@ -143,6 +143,10 @@ div.TableroApp{
   display: none; 
 }
 
+.visible {
+  display: block;
+}
+
 
 
 
