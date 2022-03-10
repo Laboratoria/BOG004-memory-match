@@ -19,10 +19,10 @@ const botonJugar = document.getElementById("botonInicial");
 botonJugar.addEventListener("click", () => {
   const contenedor = document.createElement("div");
   contenedor.className = "frontales";
-  dataPokemon.forEach((element) => {
+  //dataPokemon.forEach((element) => {
     /* contenedor.appendChild(App(element)); */
     /*Trae los elementos de data pokémon y sus caracteristicas*/
-  });
+  //});
   console.log(contenedor);
   /* Aqui se llama el id del 2ndo div de la pagina 2 para que se muestren las imagenes */
   document.getElementById("contenedorTodas").appendChild(contenedor);
@@ -108,3 +108,10 @@ function createCards() {
 }
 
 createCards();
+
+document.getElementById("pag2").style.display = "none";
+const botonRetroceder = document.getElementById("retroceder");
+botonRetroceder.addEventListener("click", () => {
+  document.getElementById("pag2").style.display = "none";
+  document.getElementById("pag1").style.display = "block";
+});
