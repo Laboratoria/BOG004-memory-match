@@ -31,26 +31,21 @@ botonJugar.addEventListener("click", () => {
 });
 
 let arrayParaCompararId = new Array();
+let contadorParejas =0;
+
 function retrocederLasCartas() {
   console.log(arrayParaCompararId)
-  const pokemonesVisibles = document.getElementsByClassName("card");
-  //for (let i = 0; i < pokemonesVisibles.length; i++) {
-    //console.log(pokemonesVisibles[i].dataset.name)
-    //if (arrayParaCompararId.includes(pokemonesVisibles[i].dataset.name)) {
-      //pokemonesVisibles[i].style.display = "block";
-    //}
- // }
- pokemonesVisibles[arrayParaCompararId[0].id].classList.toggle("visible");
- pokemonesVisibles[arrayParaCompararId[1].id].classList.toggle("visible");
+  const pokebolasVisibles = document.getElementsByClassName("card");
+  pokebolasVisibles[arrayParaCompararId[0].id].classList.add("visible");
+  pokebolasVisibles[arrayParaCompararId[1].id].classList.add("visible");
+
   const pokemonesOcultos = document.getElementsByClassName("pokemon");
-  pokemonesOcultos[arrayParaCompararId[0].id].classList.toggle("oculto");
-  pokemonesOcultos[arrayParaCompararId[1].id].classList.toggle("oculto");
-  //for (let i = 0; i < pokemonesOcultos.length; i++) {
-    //console.log(pokemonesOcultos[i].dataset.name)
-    //if (arrayParaCompararId.includes(pokemonesOcultos[i].dataset.name)) {
-      //pokemonesOcultos[i].style.display = "none";
-    //}
-  //}
+  pokemonesOcultos[arrayParaCompararId[0].id].classList.add("oculto");
+  pokemonesOcultos[arrayParaCompararId[1].id].classList.add("oculto");
+  pokemonesOcultos[arrayParaCompararId[0].id].classList.remove("visible");
+  pokemonesOcultos[arrayParaCompararId[1].id].classList.remove("visible");
+  
+  arrayParaCompararId = [];
 }
 function compararId(idDeComparar, position) {
   console.log(idDeComparar);
@@ -62,9 +57,16 @@ function compararId(idDeComparar, position) {
     arrayParaCompararId.push(pokemonSeleccionado);
     if (arrayParaCompararId[0] && arrayParaCompararId[1]) {
       if (arrayParaCompararId[0].name === arrayParaCompararId[1].name) {
+        arrayParaCompararId = [];
+        contadorParejas += 1;
+        if (contadorParejas === 9){
+          alert("¡GANASTE!")
+        }
         return console.log(true);
-      } else {
-        retrocederLasCartas();
+        
+        } else {
+        setTimeout(retrocederLasCartas, 1000);
+        
         return console.log(false);
       }
     }
@@ -87,13 +89,18 @@ function createCards() {
 
     cardBaseContainerHTML.innerHTML = imagePokemon;
     cardBaseContainerHTML.addEventListener("click", (e) => {
+      if (arrayParaCompararId.length === 2) {
+        return
+      }
       const idPokemonSeleccionado = parseInt(e.target.id);
       const imagenesPokebolas = document.getElementsByClassName("card");
       const imagenesData = document.getElementsByClassName("pokemon");
       console.log(idPokemonSeleccionado);
       //console.log(e.target.dataset.name);
-      imagenesPokebolas[idPokemonSeleccionado].classList.toggle("oculto");
-      imagenesData[idPokemonSeleccionado].classList.toggle("oculto");
+      imagenesPokebolas[idPokemonSeleccionado].classList.add("oculto");
+      imagenesPokebolas[idPokemonSeleccionado].classList.remove("visible");
+      imagenesData[idPokemonSeleccionado].classList.remove("oculto");
+      imagenesData[idPokemonSeleccionado].classList.add("visible");
       compararId(dataPokemon[i].id, i);
     });
     cardsContainerElement.appendChild(cardBaseContainerHTML);
